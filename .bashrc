@@ -15,6 +15,7 @@ alias rpurge='find . -type f \( -name ".*~" -o -name "*.bak" -o -name "*~" -o -n
 bind '"\e[A"':history-search-backward
 bind '"\e[B"':history-search-forward
 PS1='\n`if [ $? = 0 ]; then echo "\[\e[32m\]✔"; else echo "\[\e[31m\]✘"; fi`  \[\e[01;30m\]\t\[\e[00m\] \u\[\e[01;30m\]@\h `[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "\[\e[31m\]" || echo "\[\e[32m\]"`$(__git_ps1 "{%s} \[\e[00m\]")\[\e[00m\][\[\e[01;34m\]\w\[\e[00m\]] '
-
+GPG_TTY=$(tty)
+export GPG_TTY
 # Load shell prompt line
 source ~/.shell_prompt.sh
