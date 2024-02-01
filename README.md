@@ -1,5 +1,6 @@
-# Symbolic link:
+# How to setup
 
+Symbolic link:
 ln -fs /Users/eketheeswaran/Documents/projets/dotfiles/.vimrc ~/.vimrc
 
 Open .vimrc : `vi .vimrc`. It installs all the plugins.
